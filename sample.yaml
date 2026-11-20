@@ -1,0 +1,38 @@
+# 一括生成の入力例
+# 使い方: generate.bat sample.yaml
+# 相対パスは、この YAML ファイルがあるフォルダから見たパスです
+
+# 全体の設定（すべての voice に使う）
+setting:
+  # 参照音声（まねする声）。ファイル1つ / フォルダ / リストで書ける
+  # ref-wav: voice.wav
+  # ref-wav: voices/          # フォルダの直下にある音声ファイルを名前順にすべて使う
+  # ref-wav:
+  #   - voices/a.wav
+  #   - voices/b.wav
+
+  # 声やスタイルの説明文
+  # caption: "落ち着いた、近い距離感の女性話者"
+
+  # LoRA アダプターのフォルダ（1つだけ）
+  # lora: lora_study/名前/output/train/checkpoint_final
+
+  # 出力フォルダ（既定: この YAML と同じフォルダの outputs）
+  out-dir: outputs
+
+# 作る音声の一覧
+voice:
+  - text: こんにちは、今日はいい天気ですね😊
+
+  - text: えっ、本当に？😲
+    count: 2
+    # { で始まる値は " で囲む
+    filename: "{%Y%m%d}_驚き"
+
+  - text: ねえ、ちょっと聞いて。あのね、実は……🤭
+    count: 3
+    filename: 内緒話
+    # この voice だけの設定（書いた項目だけ全体の設定を上書きする）
+    setting:
+      caption: "ささやくような、近い距離感の話し方"
+      seed: 100

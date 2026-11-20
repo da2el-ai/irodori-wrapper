@@ -1,0 +1,21 @@
+# Irodori-TTS 本体（setup.bat で入れる）
+/Irodori-TTS/
+
+# 個人の設定とメモ
+.env
+CLAUDE.local.md
+/local/
+.claude/settings.local.json
+
+# 作業用のデータ（学習素材・生成した音声・作業用の YAML）
+/lora_study/
+/outputs/
+/voice.yaml
+
+# キャッシュ（datasets、torch など）
+/.cache/
+/torchinductor_*/
+
+# その他
+__pycache__/
+*.pyc

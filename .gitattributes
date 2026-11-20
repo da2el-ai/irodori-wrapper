@@ -1,0 +1,2 @@
+# bat は CRLF でないと cmd で正しく動かないことがあるため、どの環境でも CRLF にする
+*.bat text eol=crlf

@@ -1,0 +1,6 @@
+{
+  "venvPath": "Irodori-TTS",
+  "venv": ".venv",
+  "extraPaths": ["Irodori-TTS", "scripts"],
+  "exclude": ["Irodori-TTS", "local", "lora_study", "outputs", ".cache", "**/__pycache__"]
+}
